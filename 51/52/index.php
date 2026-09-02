@@ -1,7 +1,6 @@
 <?php
 require_once 'connect.php';
 
-// SQL Query ดึงเฉพาะข้อมูลของ "ตรัยรัตน์"
 $sql = "SELECT * FROM students WHERE first_name = :first_name";
 $stmt = $conn->prepare($sql);
 $stmt->execute([':first_name' => 'ตรัยรัตน์']);
@@ -33,10 +32,9 @@ $my_info = $stmt->fetchAll();
 
 <div class="container py-5">
     <div class="card p-4">
-        <!-- Header & ปุ่ม GitHub -->
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
             <h3 class="text-success m-0">กิจกรรมในชั้นเรียนที่ 5 (ข้อมูลนักเรียนเฉพาะบุคคล)</h3>
-            <a href="https://github.com/your-username/your-repository" target="_blank" class="btn btn-github d-inline-flex align-items-center gap-2">
+            <a href="https://github.com/sunpao2020/act5/tree/main/51/52" target="_blank" class="btn btn-github d-inline-flex align-items-center gap-2">
                 <i class="bi bi-github fs-5"></i> View Source Code
             </a>
         </div>
@@ -68,7 +66,6 @@ $my_info = $stmt->fetchAll();
     </div>
 </div>
 
-<!-- jQuery, Bootstrap & DataTables JS -->
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
